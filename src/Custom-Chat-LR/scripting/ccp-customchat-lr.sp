@@ -391,7 +391,7 @@ public Processing cc_proc_OnNewMessage(const int[] props, int propsCount, ArrayL
     char szIndent[64];
     params.GetString(0, szIndent, sizeof(szIndent));
     
-    if(StrContains("ST", szIndent) != 0 || strlen(szIndent) != 3 || !props[0]) {
+    if(StrContains(szIndent, "ST") != 0 || strlen(szIndent) != 3 || !props[0]) {
         return Proc_Continue;
     } 
 
